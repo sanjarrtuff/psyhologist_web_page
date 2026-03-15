@@ -1,0 +1,294 @@
+/* Общие стили */
+:root {
+    --primary-color: #333;
+    --accent-color: #7a7a7a;
+    --bg-color: #f9f9f9;
+    --text-spacing: 2.5rem; /* Размер отступа между строками на главной */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    color: var(--primary-color);
+    line-height: 1.6;
+    background-color: var(--bg-color);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Шапка */
+header {
+    padding: 20px 0;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+}
+
+.header-content {
+    display: flex;
+    justify-content: flex-start; /* Прижимает всё к левому краю */
+    align-items: center;
+}
+
+.main-nav {
+    display: flex;
+    gap: 30px;
+    margin-right: 50px; /* Отступ между кнопками и логотипом */
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 400;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+.main-nav a:hover {
+    color: var(--accent-color);
+}
+
+.logo img {
+    height: 70px; /* Настройте высоту логотипа */
+}
+
+/* Главная секция */
+.hero {
+    padding: 80px 0;
+    background-color: #fff;
+}
+
+.hero-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero-text h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 4rem;
+    margin-bottom: var(--text-spacing);
+}
+
+.hero-text .subtitle {
+    font-size: 1.5rem;
+    margin-bottom: var(--text-spacing);
+    color: var(--accent-color);
+    font-weight: 300;
+}
+
+.hero-image img {
+    max-width: 500px;
+    border-radius: 5px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+/* Секция Обо мне */
+.about-section {
+    padding: 100px 0;
+    background-color: var(--bg-color);
+}
+
+.about-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.about-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.about-grid {
+    display: flex;
+    gap: 40px;
+    margin: 40px 0;
+}
+
+.about-item {
+    flex: 1;
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+}
+
+.qualifications, .philosophy {
+    margin-top: 40px;
+    padding: 30px;
+    background: #f0f0f0;
+    border-radius: 8px;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+    .header-content, .hero-wrapper, .about-grid {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .main-nav {
+        margin-right: 0;
+        margin-bottom: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-image img {
+        max-width: 100%;
+        margin-top: 40px;
+    }
+}
+/* Стили для Правил консультирования */
+.rules-section {
+    padding: 80px 0;
+    background-color: #fff;
+}
+
+.rules-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.rule-block {
+    margin-bottom: 40px;
+}
+
+.rule-block h3 {
+    font-family: 'Playfair Display', serif;
+    color: var(--primary-color);
+    border-left: 4px solid var(--accent-color);
+    padding-left: 15px;
+    margin-bottom: 15px;
+}
+
+.emergency-box {
+    background-color: #fff0f0;
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid #ffcccc;
+}
+
+/* Стили для Контактов */
+.contacts-section {
+    padding: 100px 0;
+    background-color: var(--bg-color);
+}
+
+.contacts-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 900px;
+    margin: 0 auto;
+    gap: 50px;
+}
+
+.phone {
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.phone a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.btn-link {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #24A1DE; /* Цвет Telegram */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    transition: opacity 0.3s;
+}
+
+.btn-link.secondary {
+    background-color: var(--primary-color);
+}
+
+.btn-link:hover {
+    opacity: 0.8;
+}
+
+.contacts-qr {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contacts-qr img {
+    width: 200px;
+    height: auto;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* Футер */
+footer {
+    padding: 40px 0;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #888;
+}
+
+@media (max-width: 768px) {
+    .contacts-wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+.rules-intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 50px;
+    font-size: 1.1rem;
+    font-style: italic;
+    color: var(--accent-color);
+}
+
+.rule-block p, .rule-block li {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 10px;
+}
+
+.rule-block h3 {
+    margin-top: 30px;
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+.emergency-box ul {
+    margin-top: 10px;
+}
